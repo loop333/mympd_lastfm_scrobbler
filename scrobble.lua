@@ -63,16 +63,20 @@ if rc ~= 0 then
   return "Not playing"
 end
 
-local artist = result["Artist"][1]
-local title = result["Title"]
+local artist = result.Artist[1]
+local title = result.Title
+local albumArtist = result.AlbumArtist[1]
+local album = result.Album
 
 data = {
-  method    = "track.scrobble",
-  api_key   = API_KEY,
-  timestamp = tostring(os.time()-30),
-  track     = title,
-  artist    = artist,
-  sk        = SESSION_KEY,
+  method      = "track.scrobble",
+  api_key     = API_KEY,
+  timestamp   = tostring(os.time()-30),
+  track       = title,
+  artist      = artist,
+  album       = album,
+  albumArtist = albumArtist,
+  sk          = SESSION_KEY,
 }
 local rc = sendData(data)
 if rc ~= 0 then
