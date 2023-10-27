@@ -71,6 +71,15 @@ if rc ~= 0 then
   return "Now Playing: Not Playing"
 end
 
+if result.webradio then
+  return "web radio"
+end
+
+if string.sub(result.uri, 1, 8) == "https://" or
+   string.sub(result.uri, 1, 7) == "http://" then
+  return "web radio"
+end
+
 local artist = result.Artist[1]
 local title = result.Title
 local album = result.Album
