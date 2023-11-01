@@ -4,10 +4,10 @@ package.cpath = package.cpath .. ";/usr/lib/x86_64-linux-gnu/lua/5.2/?.so"
 
 local md5 = require "md5"
 
-local API_KEY     = <MY_API_KEY>
-local SECRET      = <MY_SECRET>
+local API_KEY     = YOUR_API_KEY
+local SECRET      = YOUR_SECRET
 local URL_API     = "https://ws.audioscrobbler.com/2.0/?format=json"
-local SESSION_KEY = <MY_SESSION_KEY>
+local SESSION_KEY = YOUR_SESSION_KEY
 
 local data
 
