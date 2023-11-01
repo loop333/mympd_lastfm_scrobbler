@@ -1,8 +1,7 @@
 #!/bin/sh
 
-# now playing script: it opens directory with now playing song
-
 MYMPD_HOST="http://host:port"
+MUSIC_DIR="/mnt"
 
 uri=$(curl "$MYMPD_HOST/api/default" \
   -s \
@@ -10,5 +9,5 @@ uri=$(curl "$MYMPD_HOST/api/default" \
   -H 'Content-Type: application/json' \
   -d '{"jsonrpc":"2.0","id":0,"method":"MYMPD_API_PLAYER_CURRENT_SONG","params":{}}' | jq -r .result.uri)
 
-echo "/mnt/$uri"
-dolphin --new-window --select "/mnt/$uri" &
+echo "$MUSIC_DIR/$uri"
+dolphin --new-window --select "$MUSIC_DIR/$uri" &
