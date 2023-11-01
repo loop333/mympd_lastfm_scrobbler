@@ -7,3 +7,5 @@ sudo apt-get install lua-md5
 ```
 
 set triggers for event Player (player.lua), Scrobble (scrobble.lua) and Feedback (love.lua)
+
+np - script for opening directory with now playing song (debian/kde plasma/dolphin)
