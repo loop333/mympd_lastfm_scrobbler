@@ -1,11 +1,21 @@
 # myMPD last.fm scrobbler
 Scrobble tracks from myMPD to last.fm
 
-tested on debian 13, you need to install MD5 library:
-```
-sudo apt-get install lua-md5
-```
+Triggers:  
 
-set triggers for events Player (lastfm_player.lua), Scrobble (lastfm_scrobble.lua) and Feedback (lastfm_feedback.lua)
+Trigger name: lastfm_player  
+Event: Player (mpd_player)  
+Script: lastfm  
+Scrips arguments: trigger=player  
 
-np - script for opening directory with now playing song (debian/kde plasma/dolphin)
+Trigger name: lastfm_scrobble  
+Event: Scrobble (mympd_scrobble)  
+Script: lastfm  
+Scrips arguments: trigger=scrobble  
+
+Trigger name: lastfm_feedback  
+Event: Feedback (mympd_feedback)  
+Script: lastfm  
+Scrips arguments: trigger=feedback  
+
+To get session key launch script lastfm.lua with argument trigger=key  
