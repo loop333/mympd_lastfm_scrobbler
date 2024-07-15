@@ -8,7 +8,7 @@ lastfm_config.PASSWORD    = YOUR_PASSWORD
 lastfm_config.API_KEY     = YOUR_API_KEY
 lastfm_config.SECRET      = YOUR_SECRET
 
--- use script lastfm_get_session_key.lua
+-- use script lastfm.lua with argument trigger=key
 lastfm_config.SESSION_KEY = YOUR_SESSION_KEY
 
 return lastfm_config
